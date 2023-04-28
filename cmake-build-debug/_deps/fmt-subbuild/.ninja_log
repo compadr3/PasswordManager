@@ -1,0 +1,21 @@
+# ninja log v5
+1	302	7044087731131313	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-mkdir	51b3eb22a6da18e
+1	302	7044087731131313	C:/Programowanie/CLionProjects/PasswordManager/cmake-build-debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-mkdir	51b3eb22a6da18e
+302	8928	7044087817396167	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-download	226fb0e32333d4ac
+302	8928	7044087817396167	C:/Programowanie/CLionProjects/PasswordManager/cmake-build-debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-download	226fb0e32333d4ac
+8928	9510	0	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update	afbfb54041e47cf6
+8928	9510	0	C:/Programowanie/CLionProjects/PasswordManager/cmake-build-debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-update	afbfb54041e47cf6
+9515	9872	7044087826853524	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-patch	d4284883531b9913
+9515	9872	7044087826853524	C:/Programowanie/CLionProjects/PasswordManager/cmake-build-debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-patch	d4284883531b9913
+9872	10156	7044087829644324	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-configure	ed060a28c1a2fb7e
+9872	10156	7044087829644324	C:/Programowanie/CLionProjects/PasswordManager/cmake-build-debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-configure	ed060a28c1a2fb7e
+10157	10447	7044087832596395	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-build	f9dc4badf57254b9
+10157	10447	7044087832596395	C:/Programowanie/CLionProjects/PasswordManager/cmake-build-debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-build	f9dc4badf57254b9
+10448	10771	7044087835842616	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-install	92e9b388f3ca319
+10448	10771	7044087835842616	C:/Programowanie/CLionProjects/PasswordManager/cmake-build-debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-install	92e9b388f3ca319
+10771	11437	7044087842344344	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-test	9ecda6910656bc9c
+10771	11437	7044087842344344	C:/Programowanie/CLionProjects/PasswordManager/cmake-build-debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-test	9ecda6910656bc9c
+11438	13482	7044087862842452	CMakeFiles/fmt-populate-complete	31c2c92a7e1210c6
+11438	13482	7044087862842452	fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-done	31c2c92a7e1210c6
+11438	13482	7044087862842452	C:/Programowanie/CLionProjects/PasswordManager/cmake-build-debug/_deps/fmt-subbuild/CMakeFiles/fmt-populate-complete	31c2c92a7e1210c6
+11438	13482	7044087862842452	C:/Programowanie/CLionProjects/PasswordManager/cmake-build-debug/_deps/fmt-subbuild/fmt-populate-prefix/src/fmt-populate-stamp/fmt-populate-done	31c2c92a7e1210c6

@@ -1,0 +1,9 @@
+"C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe" -G Ninja -S C:\Programowanie\CLionProjects\PasswordManager -B C:\Programowanie\CLionProjects\PasswordManager\cmake-build-debug
+-- Module support is disabled.
+-- Version: 9.1.0
+-- Build type: Debug
+-- CXX_STANDARD: 23
+-- Required features: cxx_variadic_templates
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Programowanie/CLionProjects/PasswordManager/cmake-build-debug
