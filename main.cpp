@@ -9,14 +9,15 @@
 using std::cout, std::cin, std::vector, std::endl, std::string, fmt::print;
 
 class Password {
-    string name, password;
+public:
+    string name, password, category, website, login;
 
-    Password(const string &name, const string &password) : name(name), password(password) {}
-
-    Password(const Password &p) : name(p.name), password(p.password) {}
-
-    virtual auto info() const -> void {
-        cout << name << " " << password << "\n";
+    Password(string name, string password, string category, string website, string login) {
+        this->name = name;
+        this->password = password;
+        this->category = category;
+        this->website = website;
+        this->login = login;
     }
 };
 
@@ -53,14 +54,50 @@ void printStartMessage() {
           "Remember that I can only read .txt files.\n");
 }
 
-void executeCommand(const string &command, const vector<string> &commands) {
-    if (command == "find") {
+void encryptString(string &str, string password) {
 
-        string name;
+    for (int i = 0; i < str.size(); i++) {
+        str[i] = str[i] ^ password[i % password.size()];
+    }
+    print("Encrypted string: {}\n", str);
+}
+
+void decryptString(string &str, string password) {
+    for (int i = 0; i < str.size(); i++) {
+        str[i] = str[i] ^ password[i % password.size()];
+    }
+    print("Decrypted string: {}\n", str);
+}
+
+void executeCommand(const string &command, const vector<string> &commands, const string &filePath, const string& passwordInput) {
+    if (command == "find") {
+        std::ifstream file(filePath);
+        string line;
+        vector<Password> passwords;
+        while (std::getline(file, line)) {
+            print("{}\n", line);
+        }
+
     } else if (command == "sort") {
 
     } else if (command == "add") {
+        string name, password, category, website, login;
+        print("Name:");
+        cin >> name;
+        print("Password:");
+        cin >> password;
+        print("Category:");
+        cin >> category;
+        print("[Optional] Website:");
+        cin >> website;
+        print("[Optional] Login:");
+        cin >> login;
 
+        std::ofstream file;
+        file.open(filePath, std::ios_base::app);
+        file << name << ";" << password << ";" << category << ";" << website << ";" << login << "\n";
+
+        print("Password added successfully!\n");
     } else if (command == "edit") {
 
     } else if (command == "delete") {
@@ -83,10 +120,11 @@ bool checkFile(std::string filePath) {
     return false;
 }
 
-
 int main() {
-    
+
     string s = "/home/krzysztof/CLionProjects/PasswordManager/Passwords.txt";
+
+    string password;
 
     auto sourceFile = std::filesystem::path(s);
 
@@ -100,10 +138,12 @@ int main() {
     string command;
     string filePath;
 
+    encryptString(s, "password");
+    decryptString(s, "password");
     bool first = true;
     while (filePath != "exit" || first) {
         first = false;
-        print("Please, provide me a file path.\n");
+        print("Please, provide me with a file path.\n");
         cin >> filePath;
         if (filePath == "exit") {
             print("Turning off...\n");
@@ -114,11 +154,14 @@ int main() {
             cin >> filePath;
         }
         print("Success.\nNow you are in {} !\n", filePath);
+        print("Enter password:");
+        cin >> password;
+        print("Password is in.\n");
         printAvailableCommands(commands);
         cin >> command;
         while (command != "exit" && filePath != "exit") {
             if(checkCommand(command, commands)){
-                executeCommand(command, commands);
+                executeCommand(command, commands, filePath, password);
                 cin >> command;
             } else {
                 cin >> command;
